@@ -34,25 +34,10 @@ This project showcases a full-stack data engineering pipeline using **dbt Cloud*
 
 
 
-##  Incremental Model Configuration
-
-We configure `stg_retail__fact_sales` as **incremental** with merge strategy:
-
-```yaml
-models:
-  my_new_project:
-    staging:
-      +materialized: view
-    marts:
-      +materialized: table
-    staging/retail/stg_retail__fact_sales:
-      +materialized: incremental
-      +unique_key: sale_id
-      +on_schema_change: merge ```
 
 ## Getting Started
 ##  1. Create Tables in Redshift
-Run the provided DDL & data generation queries to create and populate your tables in the retail schema.
+You can just run the provided queries to create and fill your tables in the retail schema (Redshift_queries.sql).
 
 ##  2. Connect dbt Cloud
 - Link your Redshift dev credentials
