@@ -25,7 +25,7 @@ This project showcases a full-stack data engineering pipeline using **dbt Cloud*
 - `dim_employees`: Store and employee info
 - `dim_time`: Calendar table
 
-### 📊 Fact
+###  Fact
 - `fact_sales`: Raw sales transactions
 
 ###  Marts (Business Models)
@@ -48,7 +48,7 @@ models:
     staging/retail/stg_retail__fact_sales:
       +materialized: incremental
       +unique_key: sale_id
-      +on_schema_change: merge
+      +on_schema_change: merge ```
 
 ## Getting Started
 ##  1. Create Tables in Redshift
