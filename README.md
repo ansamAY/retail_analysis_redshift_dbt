@@ -1,15 +1,17 @@
-Welcome to your new dbt project!
+#  Complete Data Engineering Project with dbt Cloud, Redshift & GitHub
 
-### Using the starter project
+This project showcases a full-stack data engineering pipeline using **dbt Cloud**, **Amazon Redshift**, and **GitHub**, simulating a real-world retail analytics use case — from raw transactional data to business-ready insights and segmentation.
 
-Try running the following commands:
-- dbt run
-- dbt test
+---
 
+##  Tech Stack
 
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [dbt community](https://getdbt.com/community) to learn from other analytics engineers
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+- **dbt Cloud**: Data transformation and orchestration
+- **Amazon Redshift**: Cloud data warehouse
+- **GitHub**: Version control for collaboration
+- **SQL + Jinja**: Transformation logic and templating
+
+---
+
+##  Project Structure
+
