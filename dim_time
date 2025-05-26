@@ -1,0 +1,17 @@
+-- Step 1: Define the date series using the WITH clause
+WITH date_series AS (
+    SELECT CURRENT_DATE - INTERVAL '1 day' * (ROW_NUMBER() OVER() - 1) AS date_id
+    FROM STV_BLOCKLIST
+    LIMIT 5000  -- Apply limit directly here
+)
+
+-- Step 2: Perform the INSERT into the dim_time table
+INSERT INTO retail.dim_time (date_id, year, quarter, month, day, weekday)
+SELECT 
+    date_id,
+    EXTRACT(YEAR FROM date_id) AS year,
+    EXTRACT(QUARTER FROM date_id) AS quarter,
+    EXTRACT(MONTH FROM date_id) AS month,
+    EXTRACT(DAY FROM date_id) AS day,
+    TO_CHAR(date_id, 'Day') AS weekday
+FROM date_series;
